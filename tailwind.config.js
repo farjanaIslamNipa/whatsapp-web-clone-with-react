@@ -9,7 +9,8 @@ export default {
       colors: {
         default: '#00a884',
         appBg: '#eae6df',
-        primary: '#3b4a54'
+        primary: '#3b4a54',
+        borderDefault: '#e9edef'
       },
       fontFamily: {
         primaryFont: ['Nunito', 'sans-serif']

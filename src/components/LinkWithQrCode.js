@@ -2,7 +2,7 @@ import React from 'react';
 import { QRCode } from 'react-qrcode-logo';
 
 
-const LinkWithQrCode = () => {
+const LinkWithQrCode = ({setLinkWith}) => {
   return (
     <div className="pb-[60px] px-[60px]">
     <div className="flex flex-col 2md:flex-row w-full justify-between pb-8 2md:pb-10 border-b border-gray-200">
@@ -35,8 +35,8 @@ const LinkWithQrCode = () => {
         </div>
       </div>
     </div>
-    <div className='text-[#008069] text-[17px] pt-[50px]'>Link with phone number</div>
-  </div>
+    <button onClick={() => setLinkWith('link-with-phone')} className='text-[#008069] text-[17px] pt-[50px]'>Link with phone number</button>
+    </div>
   );
 };
 

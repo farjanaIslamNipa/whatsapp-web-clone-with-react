@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import LinkWithQrCode from './LinkWithQrCode';
+import tutorialImage from '../assets/tutorial.png'
+import LinkWithPhone from './LinkWithPhone';
 
 const SignIn = () => {
   const [linkWith, setLinkWith] = useState('link-with-qr-code')
   return (
     <div className='relative'>
       <div className="bg-default h-[222px] absolute top-0 w-full z-10"></div>
-      <div className='px-9'>
+      <div className='px-9 pb-[92px]'>
         <div className="max-w-[1000px] mx-auto z-30 relative min-h-[39px] pt-[27px] mb-[66px]">
           <div className="flex items-center gap-[14px]">
             <span>
@@ -17,11 +19,19 @@ const SignIn = () => {
         </div>
         <div style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 15px'}} className="bg-white max-w-[1000px] mx-auto pt-16 relative z-30 rounded-[3px]">
           {
-            linkWith === 'link-with-qr-code' && <LinkWithQrCode />
+            linkWith === 'link-with-qr-code' ? <LinkWithQrCode setLinkWith={setLinkWith} /> : <LinkWithPhone setLinkWith={setLinkWith} />
           }
           <div className="bg-[#F9F9FA] py-10 px-[60px]">
             <div className='text-center text-[#41525d] text-[28px] font-light mb-4'>Tutorial</div>
-            <div className="text-center"><a href="https://faq.whatsapp.com/1317564962315842/?cms_platform=web&lang=en" target='_blank' rel='noreferrer' className='text-sm text-[#008069] hover:underline'>Need help to get started?</a></div>
+            <div className="text-center">
+              <a href="https://faq.whatsapp.com/1317564962315842/?cms_platform=web&lang=en" target='_blank' rel='noreferrer' className='text-sm text-[#008069] hover:underline'>Need help to get started?</a>
+            </div>
+            <div className='mt-10 relative'>
+              <img src={tutorialImage} alt="" className='mx-auto' />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-20 w-20 rounded-full bg-gray-800 bg-opacity-40 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 28 34"><path fill="#FFF" d="M1 4.983v24.034a2.982 2.982 0 0 0 4.564 2.53L24.792 19.53a2.981 2.981 0 0 0 0-5.058L5.563 2.454A2.983 2.983 0 0 0 1 4.983z"></path></svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
