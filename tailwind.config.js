@@ -7,7 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        default: '#00a884'
+        default: '#00a884',
+        appBg: '#eae6df',
+        primary: '#3b4a54'
+      },
+      fontFamily: {
+        primaryFont: ['Nunito', 'sans-serif']
+      },
+      screens:{
+        '2md' : '781px',
+        'slg' : '961px'
       }
     },
   }
