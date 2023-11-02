@@ -5,6 +5,18 @@ import { QRCode } from 'react-qrcode-logo';
 const LinkWithQrCode = ({setLinkWith}) => {
   return (
     <div className="pb-[60px] px-[60px]">
+    <div className="mx-8 border border-[#d1d7db] rounded-md px-10 py-6 mb-6">
+      <div className="flex gap-4">
+        <div className="flex-grow"></div>
+        <div className="flex-grow">
+          <div className="text-[17px] text-[#111b21] mb-[2px] font-medium">Download WhatsApp for Windows</div>
+          <div className="text-sm text-[#111b21] font-medium">Get calling, screen sharing and a faster experience with the new Windows app.</div>
+        </div>
+        <div className="flex-grow">
+          <button className='bg-[#008069] text-white py-[10px]'>Get the app</button>
+        </div>
+      </div>
+    </div>
     <div className="flex flex-col 2md:flex-row w-full justify-between pb-8 2md:pb-10 border-b border-gray-200">
       <div className="max-w-[556px]">
         <div className='text-[#41525d] text-[26px] font-light mb-6'>Use WhatsApp on your computer</div>
