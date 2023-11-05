@@ -5,7 +5,7 @@ import { QRCode } from 'react-qrcode-logo';
 const LinkWithQrCode = ({setLinkWith}) => {
   return (
     <div className="pb-[60px] px-[60px]">
-    <div className="mx-8 border border-[#d1d7db] rounded-md px-8 py-6 mb-6">
+    <div className="mx-8 border border-[#d1d7db] rounded-md px-10 pt-7 pb-6 mb-6 -mt-6">
       <div className="flex justify-between items-center">
         <div className="">
           <svg viewBox="0 0 76 51" height="55" preserveAspectRatio="xMidYMid meet" class="" fill="none">
@@ -17,7 +17,7 @@ const LinkWithQrCode = ({setLinkWith}) => {
           </svg>
         </div>
         <div>
-          <div className="text-[17px] text-gray-700 font-medium">Download WhatsApp for Windows</div>
+          <div className="text-[17px] text-gray-700">Download WhatsApp for Windows</div>
           <div className="text-[13px] font-medium text-gray-600">Get calling, screen sharing and a faster experience with the new Windows app.</div>
         </div>
         <div>
