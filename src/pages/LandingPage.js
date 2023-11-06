@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import LinkWithQrCode from './LinkWithQrCode';
+import LinkWithQrCode from '../components/LinkWithQrCode';
 import tutorialImage from '../assets/tutorial.png'
-import LinkWithPhone from './LinkWithPhone';
+import LinkWithPhone from '../components/LinkWithPhone';
 
 const SignIn = () => {
   const [linkWith, setLinkWith] = useState('link-with-qr-code')
@@ -21,6 +21,9 @@ const SignIn = () => {
           {
             linkWith === 'link-with-qr-code' ? <LinkWithQrCode setLinkWith={setLinkWith} /> : <LinkWithPhone setLinkWith={setLinkWith} />
           }
+
+
+          {/* Bottom section */}
           <div className="bg-[#F9F9FA] py-10 px-[60px]">
             <div className='text-center text-[#41525d] text-[28px] font-light mb-4'>Tutorial</div>
             <div className="text-center">

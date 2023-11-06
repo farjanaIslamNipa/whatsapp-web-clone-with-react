@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import SignIn from "../components/SignIn.js";
+import LandingPage from "../pages/LandingPage.js";
 
 const routes = createBrowserRouter([
   {
@@ -7,7 +7,7 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <SignIn />
+        element: <LandingPage />
       }
     ]
   }
