@@ -20,7 +20,7 @@ const LinkWithPhone = ({setLinkWith}) => {
   }, []);
   return (
     <div className="pb-[60px] px-[60px] ">
-      <div className='text-[#41525d] text-[26px] font-light mb-4 text-center'>Enter phone number</div>
+      <div className='text-[#41525d] text-[26px] font-light mb-3 text-center'>Enter phone number</div>
       <div className="text-[#8696a0] text-base mb-8 text-center">Select a country and enter your WhatsApp phone number.</div>
 
       <div>
@@ -29,16 +29,18 @@ const LinkWithPhone = ({setLinkWith}) => {
             <div className='px-6'>Bangladesh {countries?.length}</div>  
           </div>
           {
-            openDropdown && <div className="country-dropdown-box p-4 w-full bg-white absolute top-16 z-40">
+            openDropdown && <div className="country-dropdown-box p-4 w-full bg-white absolute top-[58px] z-40 h-[390px] overflow-hidden overflow-y-auto">
               {
                 countries?.length && 
                 countries?.sort((a,b) => a?.name.localeCompare(b?.name)).map((country) => (
-                  <div key={country.name}>
-                    {country.name} 
-                    <span className='text-red-400 font-bold'>{country?.callingCodes[0]}</span>
-                    <span className='text-blue-400 font-bold'>{country?.nativeName}</span>
+                  <div key={country.name} >
+                    <div className='px-6 flex items-center'>
                     <img src={country?.flags?.svg} alt="" className='h-4' />
+                      <p className='text-[17px] leading-5'>{country.name} <br /> <span className='text-sm'>{country?.nativeName}</span></p>
+                      <div className='text-red-400 font-bold'>{country?.callingCodes[0]}</div>
+                      
                     </div>
+                  </div>
                    
                 ))
               }
